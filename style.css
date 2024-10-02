@@ -1,0 +1,284 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.top {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.left a{
+    color: black;
+    font-size: 30px;
+    margin-left: 30px;
+    transition: background-color ease 0.3s;
+}
+
+
+.left a:hover{
+    background-color: rgb(200,200,200);
+}
+
+.right a{
+    color: black;
+    font-size: 28px;
+}
+
+
+.navbar-lists {
+    display: flex;
+}
+
+.navbar-list {
+    margin-right: 40px;
+    transition: background-color ease 0.3s;
+}
+
+.navbar-list:hover {
+    background-color: rgb(200,200,200);
+}
+
+.hero-section {
+    background: url('./Images/architect.jpg') repeat center center/cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hero-section h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.hero-section {
+    position: relative;
+    background-image: url('./Images/architect.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 b {
+    background-color: black;
+    padding: 10px;
+}
+
+.projects-section {
+    padding-top: 80px;
+}
+
+.projects-section h1 {
+    font-size: 30px;
+}
+
+.projects-section hr {
+    opacity: 0.4;
+}
+
+.project-list {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.project-item img {
+   max-width: 100%;
+}
+
+.project-item {
+    position: relative;
+}
+
+.text-overlay  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+}
+
+.about-section {
+    padding-top: 80px;
+}
+
+.about-top h1 {
+    font-size: 30px;
+}
+
+.about-top hr {
+    opacity: 0.4;
+}
+
+.about-top p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.about-down {
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.about-persons img {
+    max-width: 100%;
+}
+
+.about-persons p {
+    font-size: 20px;
+}
+
+.about-persons h2 {
+    font-size: 30px;
+}
+
+.about-persons button {
+    text-align: center;
+    width: 100%;
+    background-color: rgb(228, 225, 225);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    font-size: 20px;
+    transition: background-color ease 0.3s;
+    cursor: pointer;
+}
+
+.about-persons button:hover {
+    background-color: rgb(200,200,200);
+}
+
+.contact-section {
+    padding-top: 100px;
+}
+
+.contact-top h1{
+    font-size: 30px;
+}
+
+.contact-top hr {
+    opacity: 0.4;
+}
+
+.contact-top p {
+    font-size: 20px;
+    color: black;
+}
+.contact-feedback {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.contact-feedback form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+form button {
+    background-color: black;
+    color: white;
+    max-width: 12%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color ease 0.3s;
+}
+
+form button:hover {
+    background-color: rgb(200,200,200);
+}
+
+.contact-map img{
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    padding: 40px 0;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p, .footer a{
+    color: white;
+    font-size: 20px;
+}
+
+.footer a {
+    text-decoration: underline;
+}
+
+@media(max-width:993px) {
+    .about-down, .project-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-feedback button {
+        font-size: 10px;
+    }
+}
+
+@media(max-width:600px) {
+    .about-down, .project-list{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .header .right{
+        display: none;
+    }
+}
+
+@media(max-width: 550px) {
+    .contact-feedback button {
+        font-size: 7px;
+    }
+}
+
+@media(max-width:400px) {
+    .contact-feedback button {
+        font-size: 5px;
+    }
+}
